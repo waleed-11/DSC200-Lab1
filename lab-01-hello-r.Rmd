@@ -1,7 +1,6 @@
- waleed 1/272021 ---
 title: "Lab 01 - Hello R"
-author: "Musab Isah"
-date: "1/26/2021"
+author: "waleed alenzi"
+date: "1/27/2021"
 output: html_document
 ---
 
@@ -17,4 +16,19 @@ library(datasauRus)
 
 ### Lab Exercise
 
-(Type your answer to the Exercise here. Remember to include the code, you need to put the code between three backticks followed by the following line on top of the code {r load-packages, message=FALSE}. See 'Load Packages' above as an example. Delete everything in these brackets after typing your answer.)
+```
+head(datasaurus_dozen)
+```
+Returns the first or last parts of a vector, matrix, table, data frame or function. Since head
+
+```
+summary(datasaurus_dozen)
+```
+it gave me Length:1846        Min.   :15.56   Min.   : 0.01512  
+ Class :character   1st Qu.:41.07   1st Qu.:22.56107
+```
+View(datasaurus_dozen)
+
+```
+Showing 1 to 12 of 1,846 entries, 3 total columnس
+ 
