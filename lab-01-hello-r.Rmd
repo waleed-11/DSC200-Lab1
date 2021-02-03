@@ -31,4 +31,53 @@ View(datasaurus_dozen)
 
 ```
 Showing 1 to 12 of 1,846 entries, 3 total columnس
- 
+
+
+lab 2
+
+```{r}
+datasaurus_dozen %>%
+  count(dataset) %>% 
+  print(13)
+```
+
+```{r}
+dino_data <- datasaurus_dozen %>% 
+  filter(dataset == "dino")
+
+```
+
+```{r}
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) + geom_point()
+```
+
+#correlation here
+```{r}
+dino_data %>% summarize(r = cor(x, y))
+```
+
+```{r}
+star_data <- datasaurus_dozen %>% 
+  filter(dataset == "star")
+
+```
+
+```{r}
+ggplot(data = star_data, mapping = aes(x = x, y = y)) + geom_point()
+```
+
+```{r}
+circle_data <- datasaurus_dozen %>% 
+  filter(dataset == "circle")
+
+```
+
+```{r}
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) + geom_point()
+```
+
+```{r}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+ geom_point()+
+facet_wrap(~ dataset, ncol = 3) +
+theme(legend.position = "none")
+```
